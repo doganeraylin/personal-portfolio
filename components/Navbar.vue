@@ -17,7 +17,7 @@ export default {
 <template>
   <header>
     <input type="checkbox" id="nav-toggle" :class="{ 'expanded': isMenuOpen }" class="nav-toggle" @click="toggleMenu">
-    <nav >
+    <nav>
       <ul>
         <li><NuxtLink to="/">home</NuxtLink></li>
         <li><NuxtLink to="/about">about</NuxtLink></li>
@@ -31,7 +31,7 @@ export default {
 </template>
 
 <style lang="scss" scoped>
-
+@import "@/styles/variables.scss";
 header {
   text-align: center;
   // z-index: 999;
@@ -83,6 +83,8 @@ header {
 nav {
   text-align: left;
   width: 100%;
+  background-color: $primary-gray;
+  // border: 1px solid $black;
   transform: scale(1, 0);
   transform-origin: top;
   transition: transform 400ms ease-in-out;
@@ -90,8 +92,9 @@ nav {
 
 nav ul {
   margin: 3.5rem 0;
-  padding: 0;
+  padding: 1.5rem 0;
   list-style: none;
+  border: 1px solid $black;
 }
 
 nav li {
@@ -130,14 +133,18 @@ nav a {
   nav {
     text-align: left;
     transition: none;
-    transform: scale(1,1);
     display: flex;
-    justify-content: flex-start;
-    align-items: center;
+    transform: scale(1,1);
+    padding: 1.2rem;
   }
   
   nav ul {
     display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 0;
+    padding: 0;
+    border: none;
   }
   
   nav li {
