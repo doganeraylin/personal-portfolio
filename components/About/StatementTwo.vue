@@ -1,8 +1,11 @@
 <template>
     <div class="container">
-        <div class="container__text">Explore a collection of my diverse web development projects, showcasing my expertise in crafting user-friendly interfaces and pushing the boundaries of frontend innovation.</div>
+        <div class="container__text">
+            <p>
+                Explore a collection of my diverse web development projects, showcasing my expertise in crafting user-friendly interfaces and pushing the boundaries of frontend innovation.
+            </p>
+        </div>
         <div class="container__transparent_vertical"></div>
-        <!-- <div class="container__transparent_horizontal"></div> -->
     </div>
 </template>
 
@@ -13,18 +16,26 @@
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     > * {
-        border: 3px solid black;
+        border: 2px solid black;
     }
     &__text {
         grid-column: span 4;
-        padding: 5rem;
-        font-size: 2rem;
+        padding: 2.5rem 1.5rem; 
         background-color: $primary-red;
     }
-    // &__transparent_horizontal {
-    //     padding: 3rem;
-    //     grid-column: span 5;
-    // }
+}
+
+@media (min-width: 768px) {
+    .container {
+        &__text {
+            font-size: 1.75rem;
+            line-height: 2.25rem;
+            padding: 3.5rem 1.5rem; 
+        }
+        &__text p {
+            max-width: 75%;
+        }
+    }
 }
 
 </style>
