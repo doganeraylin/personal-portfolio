@@ -18,21 +18,18 @@
     display: grid;
     grid-template-columns: repeat(5, 1fr);
         > * {
-            border: 3px solid black;
+            border: 2px solid black;
         }
         &__text {
-            padding: 5rem;
+            padding: 2.5rem 1.5rem; 
             background-color: $primary-yellow;
             grid-column: span 4;
-            font-size: 2rem;
         }
-
         &__text p {
-            max-width: 90%;
+            max-width: 85%;
         }
         &__transparent_horizontal_first {
             grid-column: 1 / 3;
-            padding: 2rem;
         }
         &__transparent_horizontal_second {
             grid-column: 3 / 5;
@@ -41,5 +38,18 @@
         &__black {
             background: $black;
         }
+}
+
+@media (min-width: 768px) {
+    .container {
+        &__text {
+            font-size: 1.75rem;
+            line-height: 2.25rem;
+            padding: 3.5rem 1.5rem; 
+        }
+        &__text p {
+            max-width: 75%;
+        }
+    }
 }
 </style>
