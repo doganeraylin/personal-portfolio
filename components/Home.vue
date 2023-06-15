@@ -10,8 +10,9 @@
         </div>
         <div class="container__button">
            <Button 
-            buttonText="explore my work"
-            to="/projects"/>
+                buttonText="explore my work"
+                to="/projects"
+            />
         </div>
         <div class="container__bottom"></div>
     </div>
@@ -41,10 +42,6 @@
     }
     &__button {
         grid-column: 1 / 5;
-        padding: 1rem;
-    }
-    &__button:hover {
-        background-color: $primary-blue;
     }
     &__bottom {
         background-color: black;
@@ -62,14 +59,6 @@
         margin: 1rem 0;
         line-height: 1.5;
         max-width: 90%;
-    }
-    &__button {
-        &:hover {
-            background-color: blue;
-        button {
-            background-color: blue;
-            }
-        }
     }
 }
 
