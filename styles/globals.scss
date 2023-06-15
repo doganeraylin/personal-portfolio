@@ -9,3 +9,21 @@ html {
     background-color: $primary-gray;
 }
 
+
+// project details
+
+.container {
+    &__details_title {
+        font-size: 1.5rem;
+        padding: 1rem;
+    }
+    &__details_description p {
+        max-width: 700px;
+        margin: 2rem auto;
+        font-size: 1.25rem;
+        padding: 1rem;
+        text-align: left;
+        border: 1px solid black;
+        line-height: 2.25rem;
+    }
+}
