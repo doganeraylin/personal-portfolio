@@ -11,6 +11,7 @@
             <p>Explore the technologies I utilize to create engaging frontend experiences.</p>
         </div>
         <div class="container__yellow"></div>
+        <div class="container__bottom_transparent"></div>
     </div>
 </template>
 
@@ -57,6 +58,10 @@
     &__right_transparent,
     &__yellow {
         display: none;
+    }
+    &__bottom_transparent {
+        grid-column: 1 / 8;
+        padding: 3rem 0;
     }
 }
 
