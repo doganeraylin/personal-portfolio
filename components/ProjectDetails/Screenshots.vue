@@ -1,39 +1,43 @@
 <template>
    <div class="container">
-       <div class="container_desktop">
-            <div class="single_card">
-                <p class="single_card__description">If you played a role in the design or user interface aspect of the project, showcase your work in this section.</p>
-                <div class="single_card__screenshot"></div>
-            </div>
-                      <div class="single_card">
-                <p class="single_card__description">If you played a role in the design or user interface aspect of the project, showcase your work in this section.</p>
-                <div class="single_card__screenshot"></div>
+       <div v-for="image in project.screenshots.desktop" :key="image.id" class="container_desktop">
+           <img class="container_desktop__screenshot" :src="image.image">
         </div>
-       </div>
-       <div class="container_mobile">
-           <div class="container_mobile__img">imgs</div>
-             <div class="container_mobile__img">imgs</div>
-               <div class="container_mobile__img">imgs</div>
-            
-       </div>
+        <div v-for="image in project.screenshots.mobile" :key="image.id" class="container_mobile">
+           <img class="container_mobile__screenshot" :src="image.image">
+        </div>
    </div>
 </template>
+
+<script>
+export default {
+  props: {
+    project: {
+      required: true,
+    },
+  },
+};
+</script>
 
 
 <style lang="scss" scoped>
 @import "@/styles/variables.scss";
 
-
 .container {
-    margin: 5rem 0;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+
 }
 
 .container_desktop,
 .container_mobile {
     display: flex;
-    flex-direction: column;
-    align-items: center;
 
+    &__screenshot {
+        max-width: 200px;
+        margin: 1rem;
+    }
 }
 .container_mobile {
     &__img {
@@ -43,23 +47,5 @@
     }
 }
 
-.single_card {
-    margin: 1rem;
-    > * {
-        margin: 1rem 0;
-    }
-    &__screenshot {
-        width: inherit;
-        height: 200px;
-        border: 2px solid black;
-    }
-}
 
-@media (min-width: 992px) {
-    .container_desktop,
-    .container_mobile {
-        flex-direction: row;
-        justify-content: space-around;
-    }
-}
 </style>
