@@ -17,10 +17,14 @@
             </div>
             <div class="container__center_contact">
                 <p class="contact_title">Let's connect!</p>
-                <!-- <div class="contact_icons">
-                    <div class="social_icon">1</div>
-                    <div class="social_icon">2</div>
-                </div> -->
+                <div class="contact_icons">
+                    <NuxtLink target="_blank" to="https://www.linkedin.com/in/aylin-do%C4%9Faner-961907214/">
+                        <img src="/assets/footer/linkedin-logo.png">
+                    </NuxtLink>
+                    <NuxtLink target="_blank" to="https://github.com/doganeraylin">
+                        <img src="/assets/footer/github-logo.png">
+                    </NuxtLink>
+                </div>
                 <p class="contact_email">doganeraylinn@gmail.com</p>
             </div>
         </div>
@@ -123,8 +127,14 @@
 }
 .contact_icons {
     display: flex;
+    justify-content: center;
+    align-items: center;
     gap: 1rem;
+    img {
+        max-width: 1.5rem;
+    }
 }
+
 
 
 @media (min-width: 768px) {
