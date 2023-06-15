@@ -2,7 +2,7 @@
     <div class="container">
         <div class="container__black"></div>
         <div class="container__title">
-            <h1>space tourism website</h1>
+            <h1>{{project.title}}</h1>
         </div>
         <div class="container__red"></div>
         <div class="container__left_transparent"></div>
@@ -16,13 +16,22 @@
     </div>
 </template>
 
+<script>
+export default {
+  props: {
+    project: {
+      required: true,
+    },
+  },
+};
+</script>
 
 <style lang="scss" scoped>
 @import "@/styles/variables.scss";
 .container {
     display: grid;
     grid-template-columns: repeat(9, 1fr);
-        grid-template-rows: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
     text-align: center;
     > * {
         border: 1px solid black;
@@ -37,7 +46,7 @@
         grid-column: 2 / 9;
     }
     &__title {
-        padding: 1rem;
+        padding: 1.75rem;
     }
     &__links {
         display: flex;
