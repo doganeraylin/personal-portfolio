@@ -1,7 +1,7 @@
 <template>
   <div>
+    <Navbar/>
     <ProjectIntro :project="project" />
-    <ProjectVideo/>
     <ProjectOverview :project="project"/>
     <KeyFeatures :project="project"/>
     <FutureEnhancements :project="project"/>
