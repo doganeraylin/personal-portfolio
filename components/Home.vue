@@ -42,6 +42,7 @@
     }
     &__button {
         grid-column: 1 / 5;
+        padding: 1rem 0;
     }
     &__bottom {
         background-color: black;
