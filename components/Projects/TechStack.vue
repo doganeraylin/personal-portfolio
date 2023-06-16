@@ -79,6 +79,7 @@ export default {
   justify-content: space-around;
   gap: 1rem;
   overflow-x: hidden;
+  min-height: 250px;
 }
 .scroll-wrapper {
   display: flex;
@@ -86,8 +87,8 @@ export default {
 .tech_stack {
   border: 1px solid $black;
   text-align: center;
-  padding: 1rem;
-  margin: 0 1rem;
+  padding: 0.5rem;
+  margin: 4rem 0.5rem 0;
   img {
     max-width: 90px;
   }
