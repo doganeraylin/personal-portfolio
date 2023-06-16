@@ -12,18 +12,37 @@ html {
 
 // project details
 
-.container {
-    &__details_title {
-        font-size: 1.5rem;
-        padding: 1rem;
+.details_container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    > * {
+        border: 2px solid $black;
     }
-    &__details_description p {
-        max-width: 700px;
+    &__description {
         margin: 2rem auto;
-        font-size: 1.25rem;
-        padding: 1rem;
+        grid-column: 1 / 6;
         text-align: left;
-        border: 1px solid black;
-        line-height: 2.25rem;
+        background-color: $primary-yellow;
+        color: $black;
+        padding: 2rem;
+        line-height: 1.75rem;
+    }
+    &__title {
+        text-align: center;
+        grid-column: 2 / 5;
+        font-size: 1rem;
+        padding: 1rem 0.5rem;
+        background-color: $primary-red;
+    }
+}
+
+@media (min-width: 768px) {
+    .details_container {
+        &__description {
+            grid-column: 2 / 5;
+        }
+        &__title {
+            font-size: 1.5rem;
+        }
     }
 }
