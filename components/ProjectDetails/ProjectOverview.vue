@@ -1,11 +1,11 @@
 <template>
-    <div class="container">
-        <div class="container__red"></div>
-        <div class="container__details_title">
+    <div class="details_container">
+        <div class="details_container__red"></div>
+        <div class="details_container__title">
             <h2>Project Overview</h2>
         </div>
-        <div class="container__black"></div>
-        <div class="container__details_description">
+        <div class="details_container__black"></div>
+        <div class="details_container__description">
             <p>{{project.overview}}</p>
         </div>      
     </div>
@@ -20,25 +20,3 @@ export default {
   },
 };
 </script>
-
-
-<style lang="scss" scoped>
-@import "@/styles/variables.scss";
-.container {
-    text-align: center;
-    > * {
-        border: 2px solid $black;
-    }
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    &__details_description {
-        grid-column: 1 / 4;
-    }
-    &__red {
-        background-color: $primary-red;
-    }
-    &__black {
-        background-color: $black;
-    }
-}
-</style>
