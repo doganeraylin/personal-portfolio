@@ -1,51 +1,90 @@
 <template>
-   <div class="container">
-       <div v-for="image in project.screenshots.desktop" :key="image.id" class="container_desktop">
-           <img class="container_desktop__screenshot" :src="image.image">
+  <div class="container">
+    <div class="carousel">
+      <div class="slides" :style="`transform: translateX(-${slideIndex * 100}%)`">
+        <div v-for="(image, index) in project.screenshots" :key="index" class="slide">
+          <div class="screenshot_container">
+            <img class="screenshot_container__img" :src="image.image" :alt="`Slide ${index + 1}`">
+          </div>
         </div>
-        <div v-for="image in project.screenshots.mobile" :key="image.id" class="container_mobile">
-           <img class="container_mobile__screenshot" :src="image.image">
-        </div>
-   </div>
+      </div>
+    </div>
+    <div class="dots">
+      <button v-for="(image, index) in project.screenshots" :key="index" @click="goToSlide(index)" :class="{ active: index === slideIndex }"></button>
+    </div>
+  </div>
 </template>
 
 <script>
 export default {
   props: {
     project: {
+      type: Object,
       required: true,
+    },
+  },
+  data() {
+    return {
+      slideIndex: 0,
+    };
+  },
+  methods: {
+    goToSlide(index) {
+      this.slideIndex = index;
     },
   },
 };
 </script>
 
-
 <style lang="scss" scoped>
 @import "@/styles/variables.scss";
 
-.container {
-    display: flex;
-    align-items: center;
-    overflow: hidden;
-
+.screenshot_container {
+  max-width: 50%;
+  margin: 0 auto;
+  &__img {
+    max-width: 100%;
+    margin: 1rem 0;
+    border: 3px solid $black;
+  }
 }
-
-.container_desktop,
-.container_mobile {
-    display: flex;
-
-    &__screenshot {
-        max-width: 200px;
-        margin: 1rem;
-    }
+.carousel {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  max-height: 820px;
+  padding: 0;
+  margin: 0;
 }
-.container_mobile {
-    &__img {
-        padding: 10rem 7rem;
-        border: 1px solid black;
-        margin: 1rem 0;
-    }
+.slides {
+  display: flex;
+  transition: transform 0.3s ease-in-out;
 }
-
-
+.slide {
+  flex-shrink: 0;
+  width: 100%;
+  overflow-y: hidden;
+}
+.right {
+  font-size: 10rem;
+  border: 5px solid red;
+}
+.dots {
+  display: flex;
+  justify-content: center;
+  margin: 1rem 0;
+}
+.dots button {
+  border: none;
+  background: #ccc;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin: 0 4px;
+  padding: 0;
+}
+.dots button.active {
+  background-color: $primary-red;
+}
 </style>
