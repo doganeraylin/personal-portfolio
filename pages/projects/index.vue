@@ -3,7 +3,7 @@
     <Journey/>
     <TechStackLayout/>
     <TechStack/>
-    <ProjectLayout1 :projects="projects"/>
+    <ProjectLayout :projects="projects"/>
     <Footer/>
 </template>
 
@@ -11,8 +11,8 @@
 import Journey from "@/components/Projects/Journey.vue"
 import TechStackLayout from "@/components/Projects/TechStackLayout.vue"
 import TechStack from "@/components/Projects/TechStack.vue"
-import ProjectLayout1 from "@/components/Projects/ProjectLayout1.vue"
-import ProjectLayout2 from "@/components/Projects/ProjectLayout2.vue"
+import ProjectLayout from "~/components/Projects/ProjectLayout.vue"
+
 
 export default {
     data() {
@@ -24,8 +24,7 @@ export default {
         Journey, 
         TechStackLayout,
         TechStack,
-        ProjectLayout1,
-        ProjectLayout2
+        ProjectLayout
     },
     async mounted() {
         try {
