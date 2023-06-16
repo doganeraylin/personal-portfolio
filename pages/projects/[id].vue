@@ -11,7 +11,6 @@
 
 <script setup>
     import ProjectIntro from "@/components/ProjectDetails/ProjectIntro.vue"
-    import ProjectVideo from "@/components/ProjectDetails/ProjectVideo.vue"
     import ProjectOverview from "@/components/ProjectDetails/ProjectOverview.vue"
     import KeyFeatures from "@/components/ProjectDetails/KeyFeatures.vue"
     import FutureEnhancements from "@/components/ProjectDetails/FutureEnhancements.vue"
