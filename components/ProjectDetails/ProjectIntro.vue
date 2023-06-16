@@ -6,10 +6,10 @@
         </div>
         <div class="container__red"></div>
         <div class="container__left_transparent"></div>
-        <div class="container__links">
+        <div v-for="link in project.links" :key="link.id" class="container__links">
             <ul>
-                <li><NuxtLink to="">https://github.com/doganeraylin?tab=repositories</NuxtLink></li>
-                <li><NuxtLink to="">https://github.com/doganeraylin?tab=repositories</NuxtLink></li>
+                <li><span>live project: </span><NuxtLink  class="container__single_link" :to="link.liveProject" target="_blank">{{link.liveProject}}</NuxtLink></li>
+                <li><span>github link: </span><NuxtLink class="container__single_link" :to="link.github" target="_blanks">{{link.github}}</NuxtLink></li>
             </ul>
         </div>
         <div class="container__right_transparent"></div>
@@ -31,14 +31,12 @@ export default {
 .container {
     display: grid;
     grid-template-columns: repeat(9, 1fr);
-    grid-template-rows: repeat(4, 1fr);
     text-align: center;
     > * {
         border: 1px solid black;
     }
 
     &__black {
-        grid-column: 1 / 2;
         background-color: $black;
     }
     &__title,
@@ -47,26 +45,32 @@ export default {
     }
     &__title {
         padding: 1.75rem;
+        font-size: 1.5rem;
     }
     &__links {
         display: flex;
         align-items: center;
         justify-content: center;
-        grid-row: 2 / 5;
+        padding: 1.5rem;
+        line-height: 1.75rem;
+        font-style: italic;
+    }
+    span {
+        font-style: normal;
+        margin-right: 1rem;
     }
     &__red {
-        grid-column: 9 / 10;
         background-color: $primary-red;
     }
     &__links ul {
         list-style: none;
     }
-    &__left_transparent,
-    &__right_transparent {
-        grid-row: 2 / 5;
+    &__links li {
+        font-weight: bold;
     }
-    &__right_transparent {
-        grid-column: 9 / 10;
+    &__single_link {
+        background-color: $primary-yellow;
+        color: $black;
     }
 }
 
