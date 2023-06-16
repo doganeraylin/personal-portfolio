@@ -22,13 +22,16 @@ export default {
 
 <template>
   <div class="container">
-    <button :class="buttonClass" @click="handleClick" >
-      <div class="button_content">
-        <NuxtLink :to="to" v-if="to" class="link_style">{{ buttonText }}</NuxtLink>
-        <span v-else>{{ buttonText }}</span>
-        <img class="arrow_icon" src="/arrow-icon.png"/>
-      </div>
-    </button>
+    <div class="button_container">
+        <button :class="buttonClass" @click="handleClick" >
+          <div class="button_content">
+            <NuxtLink :to="to" v-if="to" class="link_style">{{ buttonText }}</NuxtLink>
+            <span v-else>{{ buttonText }}</span>
+            <img class="arrow_icon" src="/arrow-icon.png"/>
+          </div>
+        </button>
+    </div>
+  
   </div>
 </template>
 
@@ -38,13 +41,16 @@ export default {
 .button_content {
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  width: 150px;
   background: transparent;
   cursor: pointer;
-  font-size: 1.20rem;
+  font-size: 1.2rem;
+  margin: 0 1rem 0; 
 }
+
 .arrow_icon {
-  max-width: 1.5rem;
-  margin-left: 0.5rem;
+  max-width: 1.2rem;
   font-weight: 700;
 }
 .link_style {
@@ -55,16 +61,15 @@ export default {
   border: none;
 }
 .primary-style {
-  padding: 1rem;
+  text-align: left;
+  padding: 1rem 0.5rem;
   border: 1px solid black;
-}
-.primary-style:hover {
-  background-color: $primary-blue;
 }
 
 @media (min-width: 1080px) {
   .button_content {
     font-size: 2rem;
+    width: 300px;
   }
 }
 </style>
