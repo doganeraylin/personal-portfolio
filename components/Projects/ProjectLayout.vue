@@ -6,12 +6,10 @@
               <h1 class="container__title">{{ project.title }}</h1>
               <p class="container__overview">{{ project.overview }}</p>
               <div class="container__button">
-              <NuxtLink :to="`/projects/${project.id}`">
                 <Button 
                   buttonText="see details" 
-                  buttonClass="primary-style"
+                  :to="`/projects/${project.id}`"
                 />
-              </NuxtLink>
             </div>
           </div>
         </div>
