@@ -6,7 +6,9 @@
         </div>
         <div class="details_container__red"></div>
         <div class="details_container__description">
-            <p>{{project.futureEnhancements}}</p>
+          <ul v-for="futureEnhancement in project.futureEnhancements" :key="futureEnhancement.id" class="details_container__list">
+            <li>{{futureEnhancement.text}}</li>
+          </ul>
         </div>   
         <div class="details_container__horizontal_transparent"></div>   
     </div>
@@ -29,6 +31,11 @@ export default {
     &__horizontal_transparent {
         grid-column: 1 / 6;
         padding: 1rem;
+    }
+    &__list {
+        padding: 0.5rem;
+        line-height: 1.75rem;
+        list-style-type: square;  
     }
 }
 </style>
