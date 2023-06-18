@@ -9,9 +9,10 @@
             <p class="container__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse vestibulum molestie quam ac dapibus. Donec ut leo fermentum, placerat velit.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse vestibulum molestie quam ac dapibus</p>
         </div>
         <div class="container__button">
-           <Button 
+            <Button 
+                buttonClass="button_secondary"
                 buttonText="explore my work"
-                to="/projects"
+                to="/products"
             />
         </div>
         <div class="container__bottom"></div>
@@ -24,7 +25,7 @@
 
 .container {
     display: grid;
-    grid-template-columns: repeat(7, 1fr);
+    grid-template-columns: repeat(8, 1fr);
     > * {
         border: 2px solid black;
     }
@@ -36,17 +37,17 @@
         display: none;
     }
     &__content {
-        grid-column: 2 / 8;
+        grid-column: 2 / 9;
         padding: 1rem;
         background-color: $primary-yellow;
     }
     &__button {
-        grid-column: 1 / 5;
+        grid-column: 1 / 6;
         padding: 1rem 0;
     }
     &__bottom {
         background-color: black;
-        grid-column: 5 / 8;
+        grid-column: 6 / 9;
     }
     &__name {
         font-size: 3rem;
@@ -63,9 +64,9 @@
     }
 }
 
+
 @media (min-width: 768px) {
     .container {
-        grid-template-rows: repeat(4, 0.5fr);
         &__left_transparent_short,
         &__left_transparent_long {
             display: block;
@@ -78,22 +79,18 @@
             grid-row: 1 / 4;
         }
         &__content {
-            grid-column: 4 / 8;
-            grid-row: 1 / 5;
+            grid-column: 4 / 9;
         }
         &__button {
-            grid-column: 1 / 3;
-        }
-        &__left_transparent_long {
-            grid-column: 3 / 4;
-            grid-row: 1 / 4;
+            grid-column: 1 / 5;
         }
         &__left_transparent_short {
-            grid-column: 3 / 4;
+            grid-column: 5 / 9;
             grid-row: 4 / 5;
+            background-color: $black;
         }
         &__name {
-            font-size: 5rem;
+            font-size: 4rem;
         }
         &__position {
             font-size: 2.5rem;
