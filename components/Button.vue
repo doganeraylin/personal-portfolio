@@ -3,7 +3,7 @@ export default {
   props: {
     buttonClass: {
       type: String,
-      default: 'default-style' 
+      default: 'button_content' 
     },
     buttonText: {
       type: String,
@@ -41,35 +41,40 @@ export default {
 .button_content {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  width: 150px;
   background: transparent;
   cursor: pointer;
-  font-size: 1.2rem;
-  margin: 0 1rem 0; 
+  text-align: left;
+  padding: 1rem 0.5rem;
 }
-
+.button_content:hover {
+  background-color: $primary-red;
+}
 .arrow_icon {
   max-width: 1.2rem;
   font-weight: 700;
+  margin-left: 0.5rem;
+}
+.button_secondary {
+  width: 150%;
+  margin-left: 1rem;
+  font-size: 1rem;
+  border: 1px solid $black;
+  background: transparent;
+}
+.button_secondary:hover {
+  background-color: $primary-blue;
 }
 .link_style {
   text-decoration: none;
-  color: black;
-}
-.default-style {
-  border: none;
-}
-.primary-style {
-  text-align: left;
-  padding: 1rem 0.5rem;
-  border: 1px solid black;
+  color: $black;
 }
 
-@media (min-width: 1080px) {
+@media (min-width: 768px) {
   .button_content {
     font-size: 2rem;
-    width: 300px;
+  }
+  .button_secondary {
+    width: 180%;
   }
 }
 </style>
