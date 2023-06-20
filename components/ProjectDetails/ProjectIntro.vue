@@ -8,7 +8,14 @@
         <div class="container__left_transparent"></div>
         <div v-for="link in project.links" :key="link.id" class="container__links">
             <ul>
-                <li><span>live project: </span><NuxtLink  class="container__single_link" :to="link.liveProject" target="_blank">{{link.liveProject}}</NuxtLink></li>
+                <li v-if="project.links[0].liveProject"> 
+                    <span>live project: </span>
+                    <NuxtLink  
+                    class="container__single_link" 
+                    :to="link.liveProject" 
+                    target="_blank">{{link.liveProject}}
+                    </NuxtLink>
+                </li>
                 <li><span>github link: </span><NuxtLink class="container__single_link" :to="link.github" target="_blanks">{{link.github}}</NuxtLink></li>
             </ul>
         </div>
