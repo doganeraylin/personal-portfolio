@@ -45,6 +45,9 @@
     &__description {
         grid-column: 1 / 5;
         padding: 1rem 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         text-align: center;
     }
     &__description p {
