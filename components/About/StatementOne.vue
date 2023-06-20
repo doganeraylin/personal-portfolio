@@ -1,7 +1,7 @@
 <template>
     <div class="container">
         <div class="container__text">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse vestibulum molestie quam ac dapibus. Donec ut leo fermentum, placerat velit.</p>
+            <p> I believe that combining technical proficiency with a keen eye for aesthetics and user experience is key to crafting exceptional digital experiences. </p>
         </div>
         <div class="container__transparent_vertical"></div>
         <div class="container__transparent_horizontal_first"></div>
@@ -22,7 +22,8 @@
         }
         &__text {
             padding: 2.5rem 1.5rem; 
-            background-color: $primary-yellow;
+            background-color: $primary-red;
+            color: $primary-gray;
             grid-column: span 4;
         }
         &__text p {

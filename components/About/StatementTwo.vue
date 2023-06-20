@@ -2,7 +2,7 @@
     <div class="container">
         <div class="container__text">
             <p>
-                Explore a collection of my diverse web development projects, showcasing my expertise in crafting user-friendly interfaces and pushing the boundaries of frontend innovation.
+               I am eager to collaborate with a team of like-minded individuals who share a passion for pushing the boundaries of design and frontend development. 
             </p>
         </div>
         <div class="container__transparent_vertical"></div>
@@ -21,7 +21,7 @@
     &__text {
         grid-column: span 4;
         padding: 2.5rem 1.5rem; 
-        background-color: $primary-red;
+        background-color: $primary-yellow;
     }
 }
 

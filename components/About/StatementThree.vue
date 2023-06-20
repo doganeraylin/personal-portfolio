@@ -5,7 +5,7 @@
         <div class="container__yellow"></div>
         <div class="container__left_vertical-thin"></div>
         <div class="container__text">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse vestibulum molestie quam ac dapibus. Donec ut leo fermentum, placerat velit.</p>
+            <p>I'm currently seeking an entry-level position with a company that values continuous learning and offers a collaborative environment. I'm excited to contribute my skills, passion, and dedication as a member of a dynamic development team.</p>
         </div>
         <div class="container__bottom_short"></div>
         <div class="container__bottom_long"></div>

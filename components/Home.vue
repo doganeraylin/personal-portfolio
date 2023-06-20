@@ -6,13 +6,13 @@
         <div class="container__content">
             <h1 class="container__name">Aylin Doğaner</h1>
             <h2 class="container__position">Frontend Developer</h2>
-            <p class="container__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse vestibulum molestie quam ac dapibus. Donec ut leo fermentum, placerat velit.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse vestibulum molestie quam ac dapibus</p>
+            <p class="container__description">I'm a self-taught frontend developer passionate about creating engaging user experiences through innovative designs and seamless interactions. I aim to combine technical proficiency with a keen eye for aesthetics to bring digital projects to life. Let's collaborate and create something amazing together!</p>
         </div>
         <div class="container__button">
             <Button 
                 buttonClass="button_secondary"
                 buttonText="explore my work"
-                to="/products"
+                to="/projects"
             />
         </div>
         <div class="container__bottom"></div>
@@ -55,7 +55,7 @@
     &__position {
         line-height: 4rem;
         font-style: italic;
-        opacity: 0.5;
+        font-weight: 100;
     }
     &__description {
         margin: 1rem 0;
@@ -95,8 +95,6 @@
         &__position {
             font-size: 2.5rem;
             line-height: 4rem;
-            font-style: italic;
-            opacity: 0.5;
         }
         &__description {
             font-size: 1.5rem;
