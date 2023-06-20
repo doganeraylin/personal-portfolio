@@ -9,7 +9,7 @@
         <div class="container__black"></div>
         <div class="container__content">
             <h1 class="title">hello!</h1>
-            <p class="description">My name is Aylin, and I am a passionate junior frontend developer. I am enthusiastic about creating engaging and user-friendly web experiences through clean and efficient code.</p>
+            <p class="description">I'm a junior frontend developer with a passion for creative designs and animations. I'm particularly interested in improving my UI/UX skills and creating visually appealing and user-friendly interfaces. </p>
         </div>
     </div>
 </template>
