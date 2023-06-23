@@ -1,6 +1,7 @@
 
 
 <template>
+<div class="wrapper">
   <div class="container" ref="containerRef">
     <div class="container__transparent"></div>
     <div class="tech_stack_container">
@@ -12,6 +13,8 @@
       </div>
     </div>
   </div>
+</div>
+
 </template>
 
 <script>
@@ -57,13 +60,13 @@ export default {
       const scrollWrapper = this.$refs.scrollWrapperRef;
       const techStackItems = Array.from(scrollWrapper.children);
       gsap.to(techStackItems, {
-      xPercent: -100 * (techStackItems.length - 1),
+      xPercent: -100* (techStackItems.length - 1),
       ease: "none",
       scrollTrigger: {
         trigger: this.$refs.containerRef,
         pin: true,
         scrub: 1,
-        end: "+450",
+        end:"+3000"
       }
     })
     }
@@ -74,11 +77,13 @@ export default {
 <style lang="scss" scoped>
 @import "@/styles/variables.scss";
 
-.container {
-  display: flex;
-  justify-content: space-around;
-  gap: 1rem;
+
+.wrapper {
   overflow-x: hidden;
+}
+.container {
+  max-width: 1500px;
+  gap: 1rem;
   min-height: 250px;
 }
 .scroll-wrapper {
@@ -90,7 +95,7 @@ export default {
   padding: 0.5rem;
   margin: 4rem 0.5rem 0;
   img {
-    max-width: 90px;
+    max-width: 80px;
   }
   p {
     font-size: 1rem;
