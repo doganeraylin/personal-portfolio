@@ -21,26 +21,37 @@ export default {
 </script>
 
 <template>
-  <div class="container">
-    <div class="button_container">
-        <button :class="buttonClass" @click="handleClick" >
+  <NuxtLink :to="to" v-if="to" class="link_style">
+    <div class="container">
+      <div class="button_container">
+        <button :class="buttonClass">
           <div class="button_content">
-            <NuxtLink :to="to" v-if="to" class="link_style">{{ buttonText }}</NuxtLink>
-            <span v-else>{{ buttonText }}</span>
-            <img class="arrow_icon" src="/arrow-icon.png"/>
+            {{ buttonText }}
+            <img class="arrow_icon" src="/arrow-icon.png" />
           </div>
         </button>
+      </div>
     </div>
-  
-  </div>
+  </NuxtLink>
+
+  <span v-else>
+    <div class="container">
+      <div class="button_container">
+        <button :class="buttonClass">
+          <div class="button_content">
+            {{ buttonText }}
+            <img class="arrow_icon" src="/arrow-icon.png" />
+          </div>
+        </button>
+      </div>
+    </div>
+  </span>
 </template>
 
 <style lang="scss" scoped>
 @import "@/styles/variables.scss";
 
 .button_content {
-  display: flex;
-  align-items: center;
   background: transparent;
   cursor: pointer;
   text-align: left;
@@ -55,8 +66,6 @@ export default {
   margin-left: 0.5rem;
 }
 .button_secondary {
-  width: 150%;
-  margin-left: 1rem;
   font-size: 1rem;
   border: 1px solid $black;
   background: transparent;
@@ -72,9 +81,6 @@ export default {
 @media (min-width: 768px) {
   .button_content {
     font-size: 2rem;
-  }
-  .button_secondary {
-    width: 180%;
   }
 }
 </style>

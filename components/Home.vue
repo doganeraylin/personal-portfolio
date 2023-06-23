@@ -102,11 +102,6 @@
             line-height: 1.5;
             max-width: 95%;
         }
-        &__button {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
     }
 }
 
