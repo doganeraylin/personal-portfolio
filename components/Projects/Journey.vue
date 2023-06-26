@@ -103,8 +103,11 @@
             line-height: 9.5rem;
         }
         &__description {
-        padding: 2rem 0;
-        font-size: 5rem;
+            padding: 2rem 0;
+        }
+        &__description p {
+            max-width: 60%;
+            font-size: 3rem;
         }
     }
 }

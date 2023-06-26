@@ -86,4 +86,20 @@ export default {
     }
   }
 }
+
+@media (min-width: 1600px) {
+  .container {
+    &__single_content > * {
+      max-width: 50%;
+
+    }
+    &__title {
+      font-size: 3rem;
+    }
+    &__overview {
+      font-size: 1.75rem;
+      line-height: 2.5rem;
+    }
+  }
+}
 </style>

@@ -34,11 +34,5 @@
         }
     }
 }
-@media (min-width: 1440px) {
-    .container {
-        &__text {
-            max-width: 65%;
-        }
-    }
-}
+
 </style>

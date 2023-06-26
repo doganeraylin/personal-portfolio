@@ -26,9 +26,6 @@
             color: $primary-gray;
             grid-column: span 4;
         }
-        &__text p {
-            max-width: 85%;
-        }
         &__transparent_horizontal_first {
             grid-column: 1 / 3;
         }
@@ -48,9 +45,6 @@
             line-height: 2.25rem;
             padding: 3.5rem 1.5rem; 
         }
-        &__text p {
-            max-width: 75%;
-        }
     }
 }
 @media (min-width: 768px) {
@@ -59,9 +53,6 @@
             font-size: 1.75rem;
             line-height: 2.25rem;
             padding: 3.5rem 1.5rem; 
-        }
-        &__text p {
-            max-width: 75%;
         }
     }
 }
