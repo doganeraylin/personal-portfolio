@@ -32,10 +32,13 @@
             line-height: 2.25rem;
             padding: 3.5rem 1.5rem; 
         }
-        &__text p {
-            max-width: 75%;
+    }
+}
+@media (min-width: 1440px) {
+    .container {
+        &__text {
+            max-width: 65%;
         }
     }
 }
-
 </style>

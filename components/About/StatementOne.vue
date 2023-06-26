@@ -53,4 +53,16 @@
         }
     }
 }
+@media (min-width: 768px) {
+    .container {
+        &__text {
+            font-size: 1.75rem;
+            line-height: 2.25rem;
+            padding: 3.5rem 1.5rem; 
+        }
+        &__text p {
+            max-width: 75%;
+        }
+    }
+}
 </style>

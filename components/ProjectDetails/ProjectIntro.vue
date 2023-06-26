@@ -89,4 +89,18 @@ export default {
         }
     }
 }
+
+@media (min-width: 1440px) {
+    .container {
+        &__title {
+            font-size: 3.25rem;
+        }
+        &__links {
+            font-size: 1.5rem;
+        }   
+        &__links li {
+            margin: 1rem 0; 
+        }
+    }
+}
 </style>
