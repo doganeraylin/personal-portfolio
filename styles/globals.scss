@@ -7,8 +7,20 @@
 
 html {
     background-color: $primary-gray;
+    overscroll-behavior: contain;
+	
+	@media (prefers-reduced-motion: no-preference) {
+		scroll-behavior: smooth;
+	}
 }
 
+// projects page 
+
+.container {
+    &__text p {
+        max-width: 60%;
+    }
+}
 
 // project details
 
@@ -34,6 +46,11 @@ html {
         padding: 1rem 0.5rem;
         background-color: $primary-red;
     }
+    &__list {
+        padding: 0.5rem;
+        line-height: 1.75rem;
+        list-style-type: square;
+    }
 }
 
 @media (min-width: 768px) {
@@ -46,3 +63,21 @@ html {
         }
     }
 }
+@media (min-width: 1440px) {
+    .details_container {
+        &__description p {
+            max-width: 80%;
+            margin: 0 auto;
+            font-size: 1.75rem;
+            line-height: 2.5rem;
+        }
+        &__title {
+            font-size: 3rem;
+        }
+        &__list {
+            font-size: 1.75rem;
+            line-height: 2.75rem;
+        }
+    }
+}
+
