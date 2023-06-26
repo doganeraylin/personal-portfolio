@@ -40,15 +40,18 @@ export default {
 @import "@/styles/variables.scss";
 
 .screenshot_container {
-  max-width: 50%;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
   margin: 0 auto;
   &__img {
+     grid-column: 2 / 5;
     max-width: 100%;
     margin: 1rem 0;
     border: 3px solid $black;
   }
 }
 .carousel {
+ 
   position: relative;
   overflow: hidden;
   display: flex;
@@ -76,15 +79,20 @@ export default {
   margin: 1rem 0;
 }
 .dots button {
+  width: 1rem;
+  height: 1rem;
   border: none;
   background: #ccc;
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
   margin: 0 4px;
   padding: 0;
 }
 .dots button.active {
   background-color: $primary-red;
+}
+
+@media (min-width: 1440px) {
+  .dots button {
+  
+  }
 }
 </style>
