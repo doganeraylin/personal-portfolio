@@ -28,14 +28,9 @@ export default {
 <style lang="scss" scoped>
 @import "@/styles/variables.scss";
 .details_container {
-    &__horizontal_transparent {
-        grid-column: 1 / 6;
-        padding: 1rem;
-    }
-    &__list {
-        padding: 0.5rem;
-        line-height: 1.75rem;
-        list-style-type: square;  
-    }
+  &__horizontal_transparent {
+      grid-column: 1 / 6;
+      padding: 1rem;
+  }
 }
 </style>
