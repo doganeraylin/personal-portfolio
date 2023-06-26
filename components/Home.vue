@@ -108,7 +108,7 @@
 @media (min-width: 1200px) {
     .container {
         &__content {
-            padding: 0 2rem 0;
+            padding: 2rem 0 2rem 2rem;
         }
         &__name {
             font-size: 7rem;
@@ -121,9 +121,9 @@
         }
         &__description {
             font-size: 2rem;
-            margin: 1rem 0;
+            margin: 2rem 0;
             line-height: 1.5;
-            max-width: 95%;
+            max-width: 70%;
         }
     }
 }
