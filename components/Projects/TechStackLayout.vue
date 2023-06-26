@@ -8,7 +8,7 @@
         <div class="container__right_transparent"></div>
         <div class="container__left_transparent"></div>
         <div class="container__description">  
-            <p>Explore the technologies I utilize to create engaging frontend experiences.</p>
+            <p>the technologies I utilize to create engaging frontend experiences</p>
         </div>
         <div class="container__yellow"></div>
         <div class="container__bottom_transparent"></div>
