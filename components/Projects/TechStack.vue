@@ -76,31 +76,35 @@ export default {
 
 <style lang="scss" scoped>
 @import "@/styles/variables.scss";
-
-
-.wrapper {
-  overflow-x: hidden;
-}
-.container {
-  max-width: 1500px;
-  gap: 1rem;
-  min-height: 250px;
-}
-.scroll-wrapper {
-  display: flex;
-}
-.tech_stack {
-  border: 1px solid $black;
-  text-align: center;
-  padding: 0.5rem;
-  margin: 4rem 0.5rem 0;
-  img {
-    max-width: 80px;
+  .wrapper {
+    overflow-x: hidden;
   }
-  p {
-    font-size: 1rem;
-    opacity: 0.5;
-    margin: 1rem 0 0;
+  .container {
+    max-width: 1500px;
+    gap: 1rem;
+    min-height: 250px;
   }
-}
+  .scroll-wrapper {
+    display: flex;
+  }
+  .tech_stack {
+    border: 1px solid $black;
+    text-align: center;
+    padding: 0.5rem;
+    margin: 4rem 0.5rem 0;
+    img {
+      max-width: 120px;
+    }
+    p {
+      font-size: 1rem;
+      opacity: 0.5;
+      margin: 1rem 0 0;
+    }
+  }
+
+  // @media (min-width: 1024px) {
+  //   .tech_stack {
+      
+  //   }
+  // }
 </style>
